@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title></title>
+        <style>
+            canvas {
+                border: 1px solid black
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="canvas" width="800px" height="800px"></canvas>
+        <script src="Board.js"></script>
+        <script src="Snake.js"></script>
+        <script src="GameController.js"></script>
+        <script type="text/javascript">
+            let snake = new Snake( 10 );
+            let board = new Board( "#canvas" );
+            let game = new GameController( board, snake);
+
+            game.refreshRate = 50;
+               
+            game.run();
+        </script>
+    </body>
+</html>
