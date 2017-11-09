@@ -1,0 +1,24 @@
+{
+  "name": "nibbles",
+  "version": "1.0.0",
+  "description": "Was playing with HTML canvas one night and decided to make the old nibbles game from the qbasic days.",
+  "main": "Board.js",
+  "scripts": {
+    "build": "mkdirp out/ && concat -o out/nibbles.min.js Board.js GameController.js Snake.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swhalley/Nibbles.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/swhalley/Nibbles/issues"
+  },
+  "homepage": "https://github.com/swhalley/Nibbles#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "concat": "^1.0.3",
+    "mkdirp": "^0.5.1"
+  }
+}
