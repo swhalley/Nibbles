@@ -27,47 +27,12 @@ class Snake {
         return this.portionSize;
     }
 
-    //This seems like 4x duplication. How can I fix this?
-    //changeDirection( 1, 0)? if check could check existing velocity *-1 if they are equal, dont change it
-
     changeDirection( x, y ){
         if( x !== 0 && this._xMovement * -1 === x ) return;
         if( y !== 0 && this._yMovement * -1 === y ) return;
 
         this._xMovement = x;
         this._yMovement = y;
-    }
-
-    directionLeft(){
-        if( this._xMovement === 1 )
-            return;
-
-        this._xMovement = -1;
-        this._yMovement = 0;
-    }
-
-    directionRight(){
-        if( this._xMovement === -1 )
-            return;
-
-        this._xMovement = 1;
-        this._yMovement = 0;
-    }
-
-    directionUp(){
-        if( this._yMovement === 1 )
-            return; 
-
-        this._xMovement = 0;
-        this._yMovement = -1;
-    }
-
-    directionDown(){
-        if( this._yMovement === -1)
-            return;
-
-        this._xMovement = 0;
-        this._yMovement = 1;
     }
 
     move(){

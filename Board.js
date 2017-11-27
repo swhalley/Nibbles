@@ -1,9 +1,10 @@
 class Board {
     constructor( cssSelector ){
         this._canvas = document.querySelector(cssSelector); 
-        this._ctx = canvas.getContext("2d");
+        this._ctx = this._canvas.getContext("2d");
 
         this.backgroundColor = "lightgrey";
+        this.fontSize = 120;
     }
 
     get getCenterX() {
@@ -38,7 +39,7 @@ class Board {
     displayLoss(){
         let text = "You Lose";
         
-        this._ctx.font = "120px Comic Sans, Comic Sans MS, cursive";
+        this._ctx.font = `${this.fontSize}px Comic Sans, Comic Sans MS, cursive`;
         this._ctx.fillStyle = "#FF2222";
         this._ctx.textAlign = "center";
         this._ctx.textBaseline = "middle";
